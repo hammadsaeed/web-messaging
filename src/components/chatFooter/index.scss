@@ -1,0 +1,36 @@
+@use "../../App.scss" as *;
+
+.footer-container {
+  padding: 5px;
+  @include flex-center;
+  justify-content: space-between;
+  background-color: #f6f6f6;
+  position: fixed;
+  bottom: 0;
+  width: 98%;
+}
+
+.back-button {
+  display: flex;
+  cursor: pointer;
+}
+
+.icon-container {
+  display: flex;
+  img {
+    margin: 10px;
+  }
+}
+
+.chat-bar {
+  @include flex-center;
+  width: 65%;
+
+  input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid $border-color;
+    border-radius: 20px;
+    font-size: 14px;
+  }
+}

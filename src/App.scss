@@ -1,0 +1,82 @@
+// Variables for scalability
+$primary-color: #007aff;
+$background-color: #f8f8f8;
+$background-accent: #f4f5f7;
+$text-color: #333;
+$border-color: #ddd;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Global styles
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  background: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+// Top Bar
+.top-bar {
+  padding: 10px 16px 0px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-direction: column;
+
+  .title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    margin-top: 5px;
+  }
+
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+}
+
+// Filter Tabs
+.filter-tabs {
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 12px 8px 12px;
+
+  div {
+    border: none;
+    background: $background-accent;
+    font-size: 14px;
+    font-weight: bold;
+    color: #6a6c6b;
+    border-radius: 16px;
+    padding: 6px 22px 6px 22px;
+
+    &.active {
+      color: #153c60;
+      padding: 6px 12px 6px 12px;
+      background-color: #ddebfc;
+      // border-bottom: 2px solid $primary-color;
+    }
+  }
+}
+
+// Message List
+.message-list {
+  flex: 1;
+  overflow-y: auto;
+  max-height: 65vh;
+}

@@ -1,0 +1,91 @@
+@use "../../App.scss" as *;
+
+.conversation-page {
+  background-color: #f0f0f0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: url("../../assets/chatBackground.png") no-repeat center
+    center/cover;
+}
+
+.contact-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.messages-container {
+  max-height: 80vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 8px;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 100%;
+  word-wrap: break-word;
+
+  &.sent {
+    align-items: flex-end;
+  }
+
+  &.received {
+    align-items: flex-start;
+  }
+
+  .message-text {
+    padding: 6px 8px;
+    border-radius: 10px;
+    background-color: #dcf8c6;
+    max-width: 70%;
+    word-wrap: break-word;
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+    align-items: flex-end;
+
+    &.received {
+      background-color: #fafafa;
+    }
+  }
+
+  .message-time {
+    font-size: 11px;
+    color: #aaa;
+    align-self: flex-end;
+  }
+
+  .message-image {
+    padding: 6px 8px;
+    border-radius: 10px;
+    background-color: #dcf8c6;
+    max-width: 70%;
+    min-width: 35%;
+    word-wrap: break-word;
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+    align-items: flex-end;
+
+    .icon-container {
+      width: 100%;
+      border-radius: 4px;
+      @include flex-center;
+      background-color: #cfe7bc;
+      justify-content: flex-start;
+
+      span {
+        font-size: 16px;
+        color: #000000;
+        opacity: 70%;
+      }
+    }
+  }
+}

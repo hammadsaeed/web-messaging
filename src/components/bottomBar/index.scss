@@ -1,0 +1,37 @@
+@use "../../App.scss" as *;
+
+.bottom-bar {
+  padding: 8px 16px;
+  border-top: 1px solid $border-color;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: sticky;
+  bottom: 0;
+  width: 92%;
+
+  .nav-item {
+    @include flex-center;
+    flex-direction: column;
+    color: $text-color;
+
+    img {
+      margin-bottom: 4px;
+    }
+
+    p {
+      margin: 0;
+      font-size: 10px;
+      color: #545458;
+    }
+
+    &.active {
+      color: $primary-color;
+
+      img {
+        filter: brightness(0.7) saturate(1.5);
+      }
+    }
+  }
+}
